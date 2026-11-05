@@ -1,0 +1,314 @@
+/*
+ვებსაიტი: ფონტები და CSS
+გამოყენებული ფონტები: Roboto და Open Sans.
+Roboto ჩატვირთულია ლოკალურად, Open Sans კი Google Fonts-იდან.
+*/
+/* ===== საერთო სტილები ===== */
+
+
+/* ===== GENERAL STYLES ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    background: #090b18;
+    color: #f5f5ff;
+    line-height: 1.7;
+}
+
+/* ===== NAVIGATION ===== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: rgba(15, 18, 38, 0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo, .footer-logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.logo span, .footer-logo span {
+    color: #22d3ee;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #c4c7dc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #22d3ee;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    border: 1px solid #8065e9;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #8065e9;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 10%;
+    background:
+        radial-gradient(circle at 80% 40%, #252c58 0%, transparent 40%),
+        #090b18;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 30px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.3;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #a78bfa, #22d3ee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    color: #a5aac4;
+    font-size: 15px;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #8055e9, #22b8d5);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(128, 85, 233, 0.3);
+}
+
+/* ===== HERO CARD ===== */
+
+.hero-card {
+    width: 310px;
+    min-width: 260px;
+    padding: 35px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #202747, #12152c);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(34, 211, 238, 0.12);
+    color: #22d3ee;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.hero-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    color: #a5aac4;
+    font-size: 13px;
+}
+
+.card-line {
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 25px 0;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    color: #a78bfa;
+    font-size: 11px;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+main {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #a5aac4;
+    font-size: 14px;
+}
+
+/* ===== FEATURE CARDS ===== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px;
+    background: #12162b;
+    border: 1px solid rgba(167, 139, 250, 0.12);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: #8065e9;
+    background: #191e3b;
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #a5aac4;
+    font-size: 13px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 8%;
+    background: #0e1122;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer p, footer a {
+    color: #9298b4;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #22d3ee;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
